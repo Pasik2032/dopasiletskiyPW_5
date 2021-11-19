@@ -10,19 +10,21 @@ import WebKit
 
 class WebController: UIViewController, WKUIDelegate {
     
-    var url: URL?
+    var newsURL: URL?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addSubview(webView)
         webView.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
         webView.pinRight(to: view)
+        webView.pinLeft(to: view)
         webView.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
-        guard let urlOk = url else {
-            return
-        }
-        print(urlOk)
-        webView.load(URLRequest(url: urlOk))
+    }
+    
+    func loadURL(url: URL) {
+        
+        newsURL = url
+        webView.load(URLRequest(url: url))
     }
     
    

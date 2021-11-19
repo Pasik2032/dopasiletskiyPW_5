@@ -56,15 +56,16 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let webView = WebController()
-        webView.url = dataToDisplay[indexPath.row].articleUrl
-        present(webView, animated: true,
+        let webVC = WebController()
+        guard let url = dataToDisplay[indexPath.row].articleUrl else { return }
+        webVC.loadURL(url: url)
+        present(webVC, animated: true,
               completion: nil)
         }
 
     
     let cellId = "ArticleCell"
-    var last = 7
+    var last = 5
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? ArticleCell
         cell?.setupArticle()
@@ -73,7 +74,7 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         cell?.image.image = dataToDisplay[indexPath.row].img
         print ("setup \(indexPath.row)")
         if(indexPath.row == last ){
-            last += 5
+            last += 8
             print("new page")
             DispatchQueue.global().async {
                 self.interactor?.loadMoreNews()
