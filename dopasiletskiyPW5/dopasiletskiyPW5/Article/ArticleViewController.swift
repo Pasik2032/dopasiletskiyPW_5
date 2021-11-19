@@ -73,7 +73,7 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         cell?.image.image = dataToDisplay[indexPath.row].img
         print ("setup \(indexPath.row)")
         if(indexPath.row == last ){
-            last += 8
+            last += 5
             print("new page")
             DispatchQueue.global().async {
                 self.interactor?.loadMoreNews()

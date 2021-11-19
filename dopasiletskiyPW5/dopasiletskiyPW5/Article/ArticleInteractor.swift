@@ -12,7 +12,7 @@ class ArticleIteractor {
     var presenter: ArticlePresentationLogic?
     var articlesArray = [ArticleModel](){
         didSet{
-            DispatchQueue.main.async{
+            DispatchQueue.global().async{
                 print ("aaa" + String(self.articlesArray.count))
                 self.presenter?.presentData(self.articlesArray)
             }
