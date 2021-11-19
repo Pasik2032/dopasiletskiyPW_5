@@ -11,19 +11,20 @@ class ArticleCell: UITableViewCell {
 
      func setupArticle() {
         addSubview(titleLabel)
-        addSubview(descriptionLabel)
-        addSubview(image)
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
          titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -self.frame.width/2).isActive = true
+         addSubview(descriptionLabel)
         descriptionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 70).isActive = true
         descriptionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
          descriptionLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -self.frame.width/2).isActive = true
-        image.leftAnchor.constraint(equalTo: leftAnchor, constant: self.frame.width/2 + 120 ).isActive = true
+         addSubview(image)
+        image.leftAnchor.constraint(equalTo: leftAnchor, constant: self.frame.width/2 + 60 ).isActive = true
          image.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
          image.widthAnchor.constraint(equalToConstant: self.frame.width/2).isActive = true
          image.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
          image.heightAnchor.constraint(equalToConstant: 120).isActive = true
+
     }
     
     let titleLabel: UILabel = {

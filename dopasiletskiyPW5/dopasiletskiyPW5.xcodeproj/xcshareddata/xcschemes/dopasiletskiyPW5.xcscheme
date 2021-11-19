@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E30B9A6D273D239700B927E6"
-               BuildableName = "dopasiletskiyPW5_2.app"
+               BuildableName = "dopasiletskiyPW5.app"
                BlueprintName = "dopasiletskiyPW5"
                ReferencedContainer = "container:dopasiletskiyPW5.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E30B9A6D273D239700B927E6"
-            BuildableName = "dopasiletskiyPW5_2.app"
+            BuildableName = "dopasiletskiyPW5.app"
             BlueprintName = "dopasiletskiyPW5"
             ReferencedContainer = "container:dopasiletskiyPW5.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E30B9A6D273D239700B927E6"
-            BuildableName = "dopasiletskiyPW5_2.app"
+            BuildableName = "dopasiletskiyPW5.app"
             BlueprintName = "dopasiletskiyPW5"
             ReferencedContainer = "container:dopasiletskiyPW5.xcodeproj">
          </BuildableReference>

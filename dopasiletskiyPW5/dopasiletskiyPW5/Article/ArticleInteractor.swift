@@ -12,10 +12,10 @@ class ArticleIteractor {
     var presenter: ArticlePresentationLogic?
     var articlesArray = [ArticleModel](){
         didSet{
-            DispatchQueue.main.async{
+//            DispatchQueue.main.async{
                 print ("count = " + String(self.articlesArray.count))
                 self.presenter?.presentData(self.articlesArray)
-            }
+//            }
         }
     }
     let networkWorker: NetworkWorker = NetworkWorker()
